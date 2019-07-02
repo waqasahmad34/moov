@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import { Text, View, StatusBar, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, StatusBar, ImageBackground, Image, ScrollView, TouchableOpacity } from 'react-native';
 import ChevronLeftIcon from 'react-native-vector-icons/Entypo';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Timeline from '../../components/Timeline/Timeline';
 import DownloadArrowIcon from 'react-native-vector-icons/MaterialIcons';
+import * as Animatable from 'react-native-animatable';
 
 class Detail extends Component {
 	render() {
 		return (
-			<View style={{ flex: 1 }}>
+			<Animatable.View animation="fadeInUp" duration={4000} style={{ flex: 1 }}>
 				<StatusBar backgroundColor="#111543" barStyle="#fff" />
 
 				<View style={{ flex: 1.1 }}>
 					<ImageBackground
 						style={{
-							flex: 1
+							position: 'absolute',
+							width: '100%',
+							height: 235,
+							bottom: 35
 						}}
 						source={require('../../assets/detail.png')}
 					>
@@ -22,7 +26,7 @@ class Detail extends Component {
 							style={{
 								justifyContent: 'center',
 								alignItems: 'center',
-								marginTop: hp('6%')
+								marginTop: hp('7%')
 							}}
 						>
 							<TouchableOpacity
@@ -32,10 +36,8 @@ class Detail extends Component {
 								<ChevronLeftIcon name="chevron-small-left" color="#fff" size={hp('4%')} />
 							</TouchableOpacity>
 
-							<Text style={{ color: '#A5A5A5', fontSize: hp('1.6%') }}>January 2019</Text>
-							<Text
-								style={{ color: '#fff', marginTop: hp('1%'), fontSize: hp('2.5%'), fontWeight: 'bold' }}
-							>
+							<Text style={{ color: '#A5A5A5', fontSize: 15, marginTop: hp('2%') }}>January 2019</Text>
+							<Text style={{ color: '#fff', marginTop: hp('0.5%'), fontSize: 24, fontWeight: 'bold' }}>
 								19001003
 							</Text>
 						</View>
@@ -44,21 +46,27 @@ class Detail extends Component {
 				<View style={{ flex: 2 }}>
 					<View
 						style={{
-							borderLeftColor: '#dddddd',
+							borderLeftColor: '#A5A5A5',
 							borderLeftWidth: 2,
-							height: '100%',
+							height: hp('100%'),
 							position: 'absolute',
 							left: 25,
-							bottom: '4%'
+							top: -54
 						}}
 					/>
 
-					<Timeline circle="color" />
-					<Timeline circle="border" />
-					<Timeline circle="border-color" />
-					<Timeline circle="border-color" />
-					<Timeline circle="border" />
-					<Timeline circle="border-color" />
+					<ScrollView>
+						<Timeline circle="color" />
+						<Timeline circle="border" />
+						<Timeline circle="border-color" />
+						<Timeline circle="border-color" />
+						<Timeline circle="border" />
+						<Timeline circle="border-color" />
+						<Timeline circle="border" />
+						<Timeline circle="border-color" />
+						<Timeline circle="border" />
+						<Timeline circle="border-color" />
+					</ScrollView>
 				</View>
 
 				<TouchableOpacity
@@ -76,9 +84,12 @@ class Detail extends Component {
 						zIndex: 99999
 					}}
 				>
-					<DownloadArrowIcon name="file-download" size={hp('3%')} color="#fff" />
+					<Image
+						source={require('../../assets/icon.png')}
+						style={{ width: 20, height: 20, resizeMode: 'contain', tintColor: '#fff' }}
+					/>
 				</TouchableOpacity>
-			</View>
+			</Animatable.View>
 		);
 	}
 }

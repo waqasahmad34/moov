@@ -57,7 +57,7 @@ class Timeline extends Component {
 	};
 	render() {
 		return (
-			<View style={{ marginLeft: '20%', marginTop: hp('4%'), flexDirection: 'row' }}>
+			<View style={{ marginLeft: '20%', marginTop: hp('2%'), flexDirection: 'row' }}>
 				{this.getShape()}
 				<View style={{ flex: 1 }}>
 					<Text style={{ fontSize: hp('2%'), color: '#A5A5A5' }}>January 2019</Text>

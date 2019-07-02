@@ -3,65 +3,68 @@ import { Text, View, StatusBar, ScrollView, Dimensions, TouchableOpacity, Image,
 import Card from '../../components/Card/Card';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import SearchIcon from 'react-native-vector-icons/AntDesign';
+import * as Animatable from 'react-native-animatable';
 
 const { width, height } = Dimensions.get('window');
 class Search extends Component {
 	render() {
 		return (
-			<View style={{ flex: 1 }}>
+			<View animation="fadeInDown" duration={3000} style={{ flex: 1 }}>
 				<StatusBar backgroundColor="#111543" barStyle="#fff" />
-				<View style={{ flex: 0.7, backgroundColor: '#111543' }}>
-					<View
-						style={{
-							flex: 1,
-							justifyContent: 'center',
-							alignItems: 'center'
-						}}
-					>
-						<Image source={require('../../assets/logo_small.png')} style={{ resizeMode: 'contain' }} />
-					</View>
-					<View
-						style={{
-							flex: 1
-						}}
-					>
+
+				<ScrollView>
+					<View style={{ height: '15%', backgroundColor: '#111543' }}>
 						<View
 							style={{
-								height: hp('6%'),
+								flex: 1,
 								justifyContent: 'center',
-								alignItems: 'center',
-								flexDirection: 'row',
-								backgroundColor: '#fff',
-								borderRadius: 5,
-
-								marginHorizontal: '3%'
+								alignItems: 'center'
 							}}
 						>
-							<TextInput style={{ flex: 1, paddingLeft: 10 }} placeholder="19001004" />
-							<SearchIcon style={{ padding: 5 }} name="search1" color="#ED3237" size={hp('3%')} />
+							<Image source={require('../../assets/logo_small.png')} style={{ resizeMode: 'contain' }} />
 						</View>
-					</View>
+						<View
+							style={{
+								flex: 1
+							}}
+						>
+							<View
+								style={{
+									height: hp('6%'),
+									justifyContent: 'center',
+									alignItems: 'center',
+									flexDirection: 'row',
+									backgroundColor: '#fff',
+									borderRadius: 5,
 
-					<View
-						style={{
-							width: 0,
-							height: 0,
-							borderLeftColor: 'transparent',
-							borderBottomColor: '#fff',
-							borderBottomWidth: 25,
-							borderLeftWidth: width,
-							position: 'absolute',
-							bottom: 0
-						}}
-					/>
-				</View>
-				<View style={{ flex: 2 }}>
-					<View style={{ marginTop: 10, marginHorizontal: '3%' }}>
-						<Text style={{ fontSize: hp('2%'), fontWeight: '500', color: '#000', opacity: 0.8 }}>
-							My Packages
-						</Text>
+									marginHorizontal: '3%'
+								}}
+							>
+								<TextInput style={{ flex: 1, paddingLeft: 10 }} placeholder="Tracking number" />
+								<SearchIcon style={{ padding: 5 }} name="search1" color="#ED3237" size={hp('3%')} />
+							</View>
+						</View>
+
+						<View
+							style={{
+								width: 0,
+								height: 0,
+								borderLeftColor: 'transparent',
+								borderBottomColor: '#fff',
+								borderBottomWidth: 25,
+								borderLeftWidth: width,
+								position: 'absolute',
+								bottom: 0
+							}}
+						/>
 					</View>
-					<ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1, marginTop: 10 }}>
+					<View style={{ flex: 2 }}>
+						<View style={{ marginTop: 10, marginHorizontal: '3%' }}>
+							<Text style={{ fontSize: hp('2%'), fontWeight: '500', color: '#000', opacity: 0.8 }}>
+								My Packages
+							</Text>
+						</View>
+
 						<TouchableOpacity onPress={() => this.props.navigation.navigate('Detail')}>
 							<Card title="19001003" description="Out for Delivery Today" icon="truck" />
 						</TouchableOpacity>
@@ -78,8 +81,8 @@ class Search extends Component {
 						<Card title="19001014" description="Delivered: 1h ago" icon="check" />
 						<Card title="19001015" description="Delivered: 10m ago" icon="check" />
 						<Card title="19001016" description="Delivered: 5h ago" icon="check" />
-					</ScrollView>
-				</View>
+					</View>
+				</ScrollView>
 			</View>
 		);
 	}

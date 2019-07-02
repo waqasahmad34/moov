@@ -6,19 +6,27 @@ class Splash extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			value: new Animated.Value(0)
+			value: new Animated.Value(1)
 		};
 	}
 	componentDidMount() {
-		Animated.timing(this.state.value, {
-			toValue: 1,
-			duration: 2000,
-			useNativeDriver: true
-		}).start();
+		Animated.sequence([
+			Animated.timing(this.state.value, {
+				toValue: 0.8,
+				duration: 2000,
+				useNativeDriver: true
+			}),
+
+			Animated.timing(this.state.value, {
+				toValue: 1,
+				duration: 2500,
+				useNativeDriver: true
+			})
+		]).start();
 
 		setTimeout(() => {
 			this.props.navigation.navigate('Search');
-		}, 2500);
+		}, 3000);
 	}
 	render() {
 		return (
