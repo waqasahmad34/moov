@@ -11,7 +11,7 @@ class Detail extends Component {
 			<View style={{ flex: 1 }}>
 				<StatusBar backgroundColor="#111543" barStyle="#fff" />
 
-				<View style={{ flex: 1.3 }}>
+				<View style={{ flex: 1.1 }}>
 					<ImageBackground
 						style={{
 							flex: 1
@@ -49,7 +49,7 @@ class Detail extends Component {
 							height: '100%',
 							position: 'absolute',
 							left: 25,
-							bottom: '5%'
+							bottom: '4%'
 						}}
 					/>
 

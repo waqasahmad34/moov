@@ -108,7 +108,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
-    signingConfigs {
+signingConfigs {
 release {
 storeFile file(MYAPP_RELEASE_STORE_FILE)
 storePassword MYAPP_RELEASE_STORE_PASSWORD

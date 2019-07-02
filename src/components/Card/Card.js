@@ -42,10 +42,8 @@ class Card extends Component {
 				</View>
 				<View style={{ flex: 2.5 }}>
 					<View style={{ padding: 14 }}>
-						<Text style={{ color: '#000', fontSize: hp('1.9%'), fontWeight: '500' }}>
-							{this.props.title}
-						</Text>
-						<Text style={{ color: '#dddddd', opacity: 0.98, fontSize: hp('1.8%'), fontWeight: '400' }}>
+						<Text style={{ color: '#464646', fontSize: 16, fontWeight: '500' }}>{this.props.title}</Text>
+						<Text style={{ color: '#A5A5A5', opacity: 0.98, fontSize: 15, fontWeight: '400' }}>
 							{this.props.description}
 						</Text>
 					</View>
