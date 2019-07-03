@@ -21,7 +21,10 @@ class Search extends Component {
 							alignItems: 'center'
 						}}
 					>
-						<Image source={require('../../assets/logo_small.png')} style={{ resizeMode: 'contain' }} />
+						<Image
+							source={require('../../assets/logo1.png')}
+							style={{ resizeMode: 'contain', width: 149, height: 69 }}
+						/>
 					</View>
 					<View
 						style={{
