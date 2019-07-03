@@ -11,7 +11,7 @@ class Search extends Component {
 	render() {
 		return (
 			<View animation="fadeInDown" duration={3000} style={{ flex: 1 }}>
-				<StatusBar backgroundColor="#111543" barStyle="#fff" />
+				<StatusBar backgroundColor="#111543" barStyle="light-content" />
 
 				<View style={{ flex: 0.7, backgroundColor: '#111543' }}>
 					<View

@@ -10,7 +10,7 @@ class Detail extends Component {
 	render() {
 		return (
 			<View style={{ flex: 1 }}>
-				<StatusBar backgroundColor="#111543" barStyle="#fff" />
+				<StatusBar backgroundColor="#111543" barStyle="light-content" />
 				<ScrollView>
 					<View style={{ height: 235 }}>
 						<ImageBackground

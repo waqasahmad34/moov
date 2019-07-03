@@ -39,7 +39,7 @@ class Splash extends Component {
 					{ alignItems: 'center' }
 				]}
 			>
-				<StatusBar backgroundColor="#111543" barStyle="#fff" />
+				<StatusBar backgroundColor="#111543" barStyle="light-content" />
 
 				<Image source={require('../../assets/logo1.png')} style={{ resizeMode: 'contain' }} />
 				{/* <View style={{ flex: 0.1, justifyContent: 'flex-end', alignItems: 'center' }}>
