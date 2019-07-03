@@ -13,13 +13,13 @@ class Splash extends Component {
 		Animated.sequence([
 			Animated.timing(this.state.value, {
 				toValue: 0.8,
-				duration: 2000,
+				duration: 1000,
 				useNativeDriver: true
 			}),
 
 			Animated.timing(this.state.value, {
 				toValue: 1,
-				duration: 2500,
+				duration: 1000,
 				useNativeDriver: true
 			})
 		]).start();
@@ -41,7 +41,7 @@ class Splash extends Component {
 			>
 				<StatusBar backgroundColor="#111543" barStyle="#fff" />
 
-				<Image source={require('../../assets/logo.png')} style={{ resizeMode: 'contain' }} />
+				<Image source={require('../../assets/logo1.png')} style={{ resizeMode: 'contain' }} />
 				{/* <View style={{ flex: 0.1, justifyContent: 'flex-end', alignItems: 'center' }}>
 					<Text style={{ color: '#fff', fontSize: hp('1.7%'), marginBottom: 10 }}>
 						Copyrights 2019 All rights Reserved{' '}
